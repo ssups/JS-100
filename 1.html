@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body></body>
+    <script>
+        // Q: 다음 배열에서 400, 500를 삭제하는 code를 입력하세요.
+        var nums = [100, 200, 300, 400, 500];
+        var nums2 = [100, 200, 300, 400, 500];
+
+        // 내답:
+        const spliceReturn = nums.splice(3, 4);
+        console.log(nums); // [100,200,300]
+        console.log(spliceReturn); // [400,500]
+        // splice는 원본배열 변화시킴 return 값으로는 추출한 값을 담아냄
+
+        // 출제자 답:
+        nums2.pop();
+        nums2.pop();
+        console.log(nums2);
+    </script>
+</html>
