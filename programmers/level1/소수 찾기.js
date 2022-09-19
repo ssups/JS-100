@@ -53,16 +53,30 @@
 // }
 // console.log(solution(1000));
 
-function how(n, count = 0) {
-    if (n / 10 < 0) {
-        return count;
-    } else {
-        n = n / 10;
-        count++;
-        how(n, count);
-        console.log(count);
-    }
-}
-asdasdf;
-console.log(how(1000));
+// function how(n, count = 0) {
+//     if (n / 10 < 0) {
+//         return count;
+//     } else {
+//         n = n / 10;
+//         count++;
+//         how(n, count);
+//         console.log(count);
+//     }
+// }
+// asdasdf;
+// console.log(how(1000));
 // function solution(n) {}
+
+function solution(n) {
+    // n의 자릿수 구하기
+    let count = 0;
+    let copiedN = n;
+    while (copiedN > 0) {
+        copiedN = Math.floor(copiedN / 10);
+        count++;
+    }
+    // 가우스 식 사용
+    return Math.round(n / (2 * count));
+}
+console.log(solution(999999));
+console.log(solution(99));
