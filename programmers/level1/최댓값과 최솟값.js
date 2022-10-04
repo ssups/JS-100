@@ -12,3 +12,6 @@ function solution(s) {
     // ...배열 => 배열의 요소들만 들어감
 }
 console.log("sdfwer".charAt(0));
+"serf".substring();
+const arr = [1, 2, 3, 4];
+console.log(arr[-1]);
